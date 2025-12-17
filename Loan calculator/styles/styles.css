@@ -1,0 +1,393 @@
+/* styles.css for Loan Calculator | DrJayCode */
+
+/* ===== CSS Reset & Base Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== Main Container ===== */
+.container {
+    width: 100%;
+    max-width: 800px;
+    animation: fadeIn 0.5s ease;
+}
+
+/* ===== Title ===== */
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+    margin: 10px auto 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.calculator {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+
+/* ===== Input Groups ===== */
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+    color: #333;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.input-group input::placeholder {
+    color: #a0aec0;
+    font-style: italic;
+}
+
+/* ===== Sub Input Group (Month/Year) ===== */
+.sub-input-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* ===== Calculate Button ===== */
+#calculatebtn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 25px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+#calculatebtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+#calculatebtn:active {
+    transform: translateY(0);
+}
+
+#calculatebtn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20px;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(25deg);
+    transition: all 0.6s;
+}
+
+#calculatebtn:hover::after {
+    left: 120%;
+}
+
+/* ===== Output Section ===== */
+.output-group {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid #e1e5e9;
+}
+
+.output-container h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #667eea;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.output-container h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+    margin: 8px auto 0;
+}
+
+.output-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #f1f3f4;
+    transition: background 0.3s ease;
+}
+
+.output-field:hover {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.output-field:last-child {
+    border-bottom: none;
+}
+
+.output-field span:first-child {
+    font-weight: 500;
+    color: #555;
+}
+
+.output-field span:last-child {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #764ba2;
+    background: #f8f9fa;
+    padding: 4px 12px;
+    border-radius: 6px;
+    min-width: 100px;
+    text-align: right;
+}
+
+/* ===== Media Queries ===== */
+
+/* ===== Media Queries ===== */
+
+/* Desktop Large - Fine-tune spacing and font sizes */
+@media screen and (min-width: 1024px) {
+    .calculator {
+        padding: 50px;
+        gap: 3rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .output-container h2 {
+        font-size: 1.6rem;
+    }
+
+    .output-field span:last-child {
+        font-size: 1.2rem;
+        min-width: 120px;
+    }
+}
+
+/* Tablet - Switch to single column layout */
+@media screen and (max-width: 768px) {
+    html, body {
+        padding: 1rem;
+    }
+
+    .calculator {
+        grid-template-columns: 1fr; /* Single column */
+        padding: 30px;
+        gap: 1.5rem;
+        max-height: 100vh; /* Prevent overflow */
+        overflow-y: auto; /* Allow internal scrolling if content exceeds viewport */
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+        grid-column: 1; /* Reset grid positioning */
+    }
+
+    .sub-input-group {
+        grid-template-columns: 1fr; /* Stack month/year vertically */
+        gap: 1rem;
+    }
+
+    .output-group {
+        margin-top: 0;
+        padding-top: 1.5rem;
+        border-top: 2px solid #e1e5e9;
+    }
+
+    .output-container h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    #calculate-btn {
+        margin-top: 1.5rem;
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
+/* Mobile Devices - Smaller screens optimization */
+@media screen and (max-width: 480px) {
+    html, body {
+        padding: 0.8rem;
+    }
+
+    .calculator {
+        padding: 25px 20px;
+        border-radius: 15px;
+        gap: 1.2rem;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .input-group {
+        margin-bottom: 0.8rem;
+    }
+
+    .input-group label {
+        font-size: 0.85rem;
+        margin-bottom: 6px;
+    }
+
+    .input-group input {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    .output-container h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .output-field {
+        padding: 12px 0;
+    }
+
+    .output-field span:first-child {
+        font-size: 0.85rem;
+    }
+
+    .output-field span:last-child {
+        font-size: 1rem;
+        min-width: 80px;
+        padding: 3px 8px;
+    }
+
+    #calculate-btn {
+        font-size: 0.95rem;
+        padding: 12px;
+        margin-top: 1rem;
+    }
+}
+
+/* Small Mobile Devices - Extra small screens */
+@media screen and (max-width: 360px) {
+    .calculator {
+        padding: 20px 15px;
+        gap: 1rem;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .output-container h2 {
+        font-size: 1.1rem;
+    }
+
+    .output-field span:last-child {
+        font-size: 0.9rem;
+        min-width: 70px;
+    }
+}
+
+/* Accessibility: Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .input-group input {
+        border-width: 3px;
+    }
+    
+    #calculate-btn {
+        border: 2px solid #ffffff;
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3 | Javascript | Loan Calculator</title>
+    <meta name="description" content="This is my first Javascript project">
+    <meta name="keywords" content="HTML, CSS, Javascript, Project">
+    <meta name="author" content="Chinedu Jeremy Great">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Chango&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="images/myFavicon.png">
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="styles/styles.css ">
+</head>
+<body>
+    <main class="container">
+        <h1>Loan Calculator | DrJayCode</h1>
+        <div class="calculator">
+            <div class="input-container">
+                <div class="input-group">
+                    <label>loan Amount</label>
+                    <input type="number" name="amount" id="amount" placeholder="Enter Loan Amount">
+                </div>
+                <div class="input-group">
+                    <label>Interest Rate (%) per Annum</label>
+                    <input type="number" name="rate" id="rate" placeholder="Enter Interest Rate">
+                </div>
+                <div class="sub-input-group">
+                    <div class="input-group">
+                        <label>Loan Term (month)</label>
+                        <input type="number" name="monthlyterm" id="monthlyterm" placeholder="In Months">
+                    </div>
+                    <div class="input-group">
+                        <label>Loan Term (year)</label>
+                        <input type="number" name="yearlyterm" id="yearlyterm" placeholder="In Years">
+                    </div>
+                </div>
+
+                <button id="calculatebtn">Calculate Loan</button>
+            </div>
+            
+            <div class="output-container">
+                <h2>Loan Summary</h2>
+                <div class="output-field">
+                    <span>Monthly Payment:</span>
+                    <span id="monthlypayment">0</span>
+                </div>
+                <div class="output-field">
+                    <span>Yearly Payment:</span>
+                    <span id="yearlypayment">0</span>
+                </div>
+                <div class="output-field">
+                    <span>Total Payment:</span>
+                    <span id="total-payment">0</span>
+                </div>
+                <div class="output-field">
+                    <span>Total Interest:</span>
+                    <span id="total-interest">0</span>
+                </div>
+            </div>
+        </div>
+
+            
+        <!-- Javascript Link -->
+        <script src="scripts/scripts.js" defer></script>
+
+    </main>
+</body>
+</html>
