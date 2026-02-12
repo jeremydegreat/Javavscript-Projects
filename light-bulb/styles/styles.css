@@ -69,9 +69,16 @@ div.img img {
 .img img#toggle-off {
     display: block;
 }
+
+.toggle-button {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
 button {
     margin: 0 auto;
-    width: 60%;
+    width: 20%;
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     border: none;

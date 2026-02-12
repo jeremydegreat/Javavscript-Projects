@@ -1,22 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
     const bulboff = document.querySelector('#toggle-off');
     const bulbon = document.querySelector('#toggle-on');
-    const button = document.getElementById('mode-toggle');
+    const buttonOn = document.getElementById('toggle-on-btn');
+    const buttonOff = document.getElementById('toggle-off-btn');
 
     let ison = false;
 
-    button.addEventListener('click', function () {
-
-        if (ison) {
-            bulboff.style.display = "none";
-            bulbon.style.display = "block";
-        }
-        else {
-            bulbon.style.display = "none";
-            bulboff.style.display = "block";
-        }
-
-        ison =!ison;
+    buttonOn.addEventListener('click', function () {
+        bulbon.style.display = "block";
+        bulboff.style.display = "none"; 
+        ison = true;
        
+    });
+
+    buttonOff.addEventListener('click', function () {
+        bulbon.style.display = "none";
+        bulboff.style.display = "block";
+        ison = false;
     });
 });
